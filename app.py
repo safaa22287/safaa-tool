@@ -35,7 +35,7 @@ if page_mode == "🔥 توليد أفكار والخطافات (Hooks)":
     user_topic = st.text_input("اكتبِ المجال أو الشخصية أو الموضوع الذي تريدين العمل عليه (مثلاً: احمد يونس، قصص أطفال، تسويق):", "")
     
     if user_topic:
-        st.success(تم توليد الأفكار بنجاح لـ: `{user_topic}` باللغة `{selected_language}`)
+        st.success(f"تم توليد الأفكار بنجاح لـ: `{user_topic}` باللغة `{selected_language}`")
         
         if "العربية" in selected_language:
             ideas_df = pd.DataFrame({

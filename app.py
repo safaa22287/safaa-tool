@@ -35,7 +35,7 @@ if page_mode == "🔥 توليد أفكار والخطافات (Hooks)":
     user_topic = st.text_input("اكتبِ المجال أو الشخصية أو الموضوع الذي تريدين العمل عليه (مثلاً: احمد يونس، قصص أطفال، تسويق):", "")
     
     if user_topic:
-        st.success(f"تم توليد الأفكار بنجاح لـ: `{user_topic}` باللغة `{selected_language}`")
+        st.success("تم توليد الأفكار بنجاح بناءً على طلبكِ!")
         
         if "العربية" in selected_language:
             ideas_df = pd.DataFrame({
@@ -82,17 +82,17 @@ elif page_mode == "🔑 الكلمات المفتاحية والهاشتاجات
         if "العربية" in selected_language:
             with col1:
                 st.subheader("📌 الكلمات المفتاحية لمحركات البحث (SEO):")
-                st.code(f"{keyword_input}, أسرار {keyword_input}, كيف أبدأ في {keyword_input}, أفضل طريقة لـ {keyword_input}, دليلك الشامل لـ {keyword_input}, تجربة {keyword_input}", language="text")
+                st.code(f"{keyword_input}, أسرار {keyword_input}, كيف أبدأ في {keyword_input}, أفضل طريقة لـ {keyword_input}, دليلك الشامل لـ {keyword_input}", language="text")
             with col2:
                 st.subheader("🏷️ الهاشتاجات الفايرال:")
-                st.code(f"#{keyword_input.replace(' ', '')} #اكسبلور #تريند #محتوى_هادف #مبدع #2026", language="text")
+                st.code(f"#{keyword_input.replace(' ', '')} #اكسبلور #تريند #محتوى_هادف #مبدع", language="text")
         else:
             with col1:
                 st.subheader("📌 SEO Keywords:")
-                st.code(f"{keyword_input}, best {keyword_input}, how to {keyword_input}, ultimate guide to {keyword_input}, {keyword_input} tips, secrets of {keyword_input}", language="text")
+                st.code(f"{keyword_input}, best {keyword_input}, how to {keyword_input}, ultimate guide to {keyword_input}, {keyword_input} tips", language="text")
             with col2:
                 st.subheader("🏷️ Viral Hashtags:")
-                st.code(f"#{keyword_input.replace(' ', '')} #trending #viral #contentcreator #explore #2026", language="text")
+                st.code(f"#{keyword_input.replace(' ', '')} #trending #viral #contentcreator #explore", language="text")
 
 # ---------------------------------------------------------
 # القسم الثالث: صياغة النصوص والسيناريوهات
@@ -103,14 +103,17 @@ elif page_mode == "💡 صياغة نصوص وسيناريوهات الفيدي�
     script_topic = st.text_input("اكتبِ عنوان أو موضوع الفيديو الذي ستصورينه:", "")
     
     if script_topic:
-        st.info(f"📝 **هيكل السيناريو المقترح لفيديو ({script_topic}) على منصة {target_platform}:**")
+        st.info("📝 هيكل السيناريو المقترح لفيديو جاهز للتصوير:")
         st.markdown(f"""
+        * **الموضوع المستهدف:** {script_topic}
+        * **المنصة:** {target_platform}
+        
         1. **المقدمة / الخطاف (0 إلى 5 ثوانٍ):** 
-           * *النص المقترح:* "هل تظن أنك تعلم كل شيء عن {script_topic}؟ ما ستراه الآن سيغير رأيك تماماً..."
+           - *النص المقترح:* "هل تظن أنك تعلم كل شيء عن هذا الموضوع؟ ما ستراه الآن سيغير رأيك تماماً..."
         2. **المشكلة أو إثارة الفضول (5 إلى 30 ثانية):** 
-           * استعراض تفاصيل المشكلة أو القصة بطريقة سريعة وجذابة تمنع المشاهد من مغادرة الفيديو.
+           - عرض التفاصيل المشوقة بطريقة سريعة تمنع المشاهد من مغادرة الفيديو.
         3. **المحتوى الجوهري (لب الفيديو):** 
-           * تقديم النقاط الأساسية أو الحلول بشكل مرتب ومبسط.
+           - تقديم النقاط الأساسية أو الحلول بشكل مرتب ومبسط.
         4. **الخاتمة ودعوة لاتخاذ إجراء (CTA):** 
-           * *النص المقترح:* "إذا اعجبتك القصة، اكتب رأيك في التعليقات واشترك ليوصلك كل جديد!"
+           - *النص المقترح:* "إذا اعجبتك الفكرة، اكتب رأيك في التعليقات واشترك ليوصلك كل جديد!"
         """)
